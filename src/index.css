@@ -1,4 +1,6 @@
-/* Reset básico e configurações de cor */
+/* ==========================================================================
+   1. RESET BÁSICO E VARIÁVEIS GLOBAIS
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +12,7 @@ body {
   background-color: #f1f5f9;
   color: #1e293b;
   padding: 32px 16px;
+  line-height: 1.6;
 }
 
 .container {
@@ -17,20 +20,42 @@ body {
   margin: 0 auto;
 }
 
-/* Blocos Brancos (Cards Grandes) */
-.header-card, .section-card {
+p {
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DE CARDS E BLOCOS (LAYOUT)
+   ========================================================================== */
+.header-card, 
+.section-card {
   background-color: #ffffff;
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
   margin-bottom: 24px;
 }
 
-/* --- NOVO: CABEÇALHO PERFIL --- */
+.section-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO DO PERFIL (HOME)
+   ========================================================================== */
 .profile-header {
   display: flex;
-  align-items: flex-start; /* Alinha o texto no topo com a foto */
+  align-items: flex-start;
   gap: 32px;
 }
 
@@ -40,7 +65,7 @@ body {
   border-radius: 50%;
   border: 4px solid #2563eb;
   flex-shrink: 0;
-  overflow: hidden; /* Garante que a foto não vaze o círculo */
+  overflow: hidden;
 }
 
 .foto-perfil img {
@@ -65,10 +90,11 @@ body {
 .contact-info {
   margin-bottom: 16px;
   color: #334155;
-  line-height: 1.6;
 }
 
-/* Botões Sociais */
+/* ==========================================================================
+   4. BOTÕES E LINKS
+   ========================================================================== */
 .social-buttons {
   display: flex;
   gap: 12px;
@@ -84,28 +110,43 @@ body {
   color: white;
 }
 
-.btn-social:hover { opacity: 0.85; transform: translateY(-2px); }
+.btn-social:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
 .github { background-color: #1e293b; }
 .linkedin { background-color: #0a66c2; }
 
-
-/* --- GRID E TEXTOS GERAIS --- */
-.section-card h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e2e8f0;
+.btn-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+.btn-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
-p { line-height: 1.6; }
+.btn-repo {
+  display: inline-block;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
 
-/* --- NOVO: EXPERIÊNCIA PROFISSIONAL --- */
+.btn-repo:hover {
+  background-color: #0f172a;
+}
+
+/* ==========================================================================
+   5. EXPERIÊNCIA PROFISSIONAL
+   ========================================================================== */
 .experience-card .exp-header {
   display: flex;
   justify-content: space-between;
@@ -113,7 +154,10 @@ p { line-height: 1.6; }
   margin-bottom: 8px;
 }
 
-.experience-card h3 { color: #0f172a; font-size: 20px; }
+.experience-card h3 {
+  color: #0f172a;
+  font-size: 20px;
+}
 
 .experience-card .badge {
   background-color: #e2e8f0;
@@ -136,10 +180,13 @@ p { line-height: 1.6; }
   color: #334155;
 }
 
-.exp-details li { margin-bottom: 10px; }
+.exp-details li {
+  margin-bottom: 10px;
+}
 
-
-/* --- NOVO: CARDS DE PROJETOS COM LOGOS --- */
+/* ==========================================================================
+   6. CARDS DE PROJETOS (VITRINE)
+   ========================================================================== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -150,7 +197,7 @@ p { line-height: 1.6; }
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  overflow: hidden; /* Mantém a imagem dentro do card */
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
@@ -158,32 +205,28 @@ p { line-height: 1.6; }
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .card-logo-container {
   width: 100%;
-  height: 170px; /* Aumentei um pouco para a imagem respirar melhor */
-  background-color: #ffffff; /* Fundo branco pra mesclar com logos com fundo */
+  height: 180px;
+  background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Garante que as pontas da imagem não vazem pelo arredondamento do card */
-  /* Removemos o padding para a imagem colar nas paredes do container */
+  overflow: hidden;
+  padding: 15px; /* Espaçamento interno para a logo não colar nas bordas */
 }
 
 .card-logo {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  /* object-fit: contain garante que a imagem inteira apareça sem ser cortada.
-     Se preferir que a imagem aja como uma "capa" preenchendo tudo (mesmo que corte as pontinhas), 
-     basta trocar a linha abaixo para: object-fit: cover; */
-  object-fit: contain; 
+  object-fit: contain; /* Mantém a proporção sem cortar */
   object-position: center;
 }
 
-/* Caso o projeto não tenha logo salva, exibe um texto provisório */
 .logo-placeholder {
   font-size: 28px;
   font-weight: bold;
@@ -198,35 +241,108 @@ p { line-height: 1.6; }
   flex-grow: 1;
 }
 
-.card-content h3 { margin-bottom: 8px; color: #0f172a; }
-.card-content p { font-size: 14px; margin-bottom: 16px; color: #475569; flex-grow: 1; }
-
-.btn-link { color: #2563eb; text-decoration: none; font-weight: 600; }
-.btn-link:hover { color: #1d4ed8; text-decoration: underline; }
-
-
-/* --- COMPONENTES DA PÁGINA DE DETALHES (Mantidos do anterior) --- */
-.btn-repo {
-  display: inline-block; background-color: #1e293b; color: #ffffff;
-  padding: 12px 24px; border-radius: 8px; text-decoration: none;
-  font-weight: 600; transition: 0.2s;
+.card-content h3 {
+  margin-bottom: 8px;
+  color: #0f172a;
 }
-.btn-repo:hover { background-color: #0f172a; }
 
-.carousel { display: flex; align-items: center; justify-content: space-between; gap: 15px; background: #f8fafc; padding: 20px; border-radius: 8px; }
-.carousel-img-wrapper { flex: 1; text-align: center; }
-.carousel-img-wrapper img { max-width: 100%; max-height: 400px; border-radius: 6px; border: 1px solid #e2e8f0; }
-.img-caption { margin-top: 15px; padding: 10px; background: white; border-radius: 6px; border: 1px solid #e2e8f0; color: #475569; }
-.btn-carousel { background: #2563eb; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px; flex-shrink: 0; }
-.btn-carousel:hover { background: #1d4ed8; }
+.card-content p {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #475569;
+  flex-grow: 1;
+}
 
-.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
-.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/* ==========================================================================
+   7. PÁGINA DE DETALHES (CARROSSEL E VÍDEO)
+   ========================================================================== */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-/* Responsividade Celular */
+.carousel-img-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.carousel-img-wrapper img {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  background-color: #0f172a; /* Fundo escuro valoriza os prints */
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.img-caption {
+  margin-top: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.btn-carousel {
+  background: #2563eb;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.btn-carousel:hover {
+  background: #1d4ed8;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (MOBILE)
+   ========================================================================== */
 @media (max-width: 600px) {
-  .profile-header { flex-direction: column; text-align: center; align-items: center; }
-  .grid-2 { grid-template-columns: 1fr; }
-  .experience-card .exp-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .social-buttons { justify-content: center; }
-}
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-card .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .social-buttons {
+    justify-content: center;
+  }
+}w  3
