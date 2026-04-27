@@ -1,66 +1,90 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const detalhesDosProjetos = {
   "pi1-libras": {
-    nome: "PI1 - Libras",
-    descricao: "Aplicação interativa para ensino básico de Libras e acessibilidade.",
-    tecnologias: "HTML, CSS e JavaScript.",
-    linkCodigo: "https://github.com/SamerNassir/pi1-libras",
-    participacao: "Desenvolvimento da interface e lógica de navegação.",
-    tecnologiasPessoais: "HTML5, CSS3 e JS Vanilla.",
+    nome: "PI1 - Libras: Acessibilidade Digital",
+    descricao: "Projeto focado na introdução ao desenvolvimento web, com ênfase na estruturação de interfaces limpas e acessíveis para o ensino básico de Libras.",
+    tecnologias: "HTML5, CSS3 e JavaScript.",
+    linkCodigo: "https://github.com/Kendi9866/PROJETO_PI",
+    participacao: "Desenvolvi a interface responsiva e a arquitetura de navegação do portal.",
+    tecnologiasPessoais: "CSS Flexbox, Manipulação de DOM e HTML Semântico.",
     fotos: [
-      "/images/PI1/Pi1_home.png",
-      "/images/PI1/Pi1_Cursos.png",
-      "/images/PI1/Pi1_SobreNos.png"
+      { url: "/images/PI1/Pi1_home.png", desc: "Página inicial do portal de Libras" },
+      { url: "/images/PI1/Pi1_Cursos.png", desc: "Seção de cursos e níveis de aprendizado" },
+      { url: "/images/PI1/Pi1_SobreNos.png", desc: "Informações sobre os objetivos do projeto" }
     ]
+  },
+  "pi2-estoque": {
+    nome: "PI2 - Gerenciador de Estoque",
+    descricao: "Sistema focado no gerenciamento e controle de inventários, permitindo o registro eficiente de entradas e saídas de produtos.",
+    tecnologias: "Java e MySQL.",
+    linkCodigo: "https://github.com/SamerHalat/pi2-estoque",
+    participacao: "Atuei diretamente na arquitetura da solução, modelagem do banco de dados relacional e codificação da lógica de negócios.",
+    tecnologiasPessoais: "Java (com uso de JDBC) e consultas SQL.",
+    fotos: []
   },
   "pi3-prateleira": {
     nome: "PI3 - Clube de Assinatura Literária",
-    descricao: "Sistema de gestão de assinaturas de livros com brindes personalizados.",
+    descricao: "Plataforma completa de e-commerce para assinaturas de livros com brindes exclusivos. O destaque é o Painel Administrativo para gestão de planos e estoque.",
     tecnologias: "Node.js, Express, Handlebars e MongoDB.",
-    linkCodigo: "https://github.com/SamerNassir/pi_3semestre",
-    participacao: "Modelagem do banco NoSQL e criação das rotas de admin e cliente.",
-    tecnologiasPessoais: "Mongoose, Express e Handlebars.",
-    videoUrl: "https://www.youtube.com/embed/S96dv5yPlOc?si=bkptMrtgX3UGsIWq",
+    linkCodigo: "https://github.com/SamerHalat/pi_3semestre",
+    participacao: "Responsável pelo Backend e modelagem NoSQL. Implementei o sistema de planos e foquei na acessibilidade web (UX).",
+    tecnologiasPessoais: "Mongoose ORM, Express.js e Autenticação.",
+    videoUrl: "https://www.youtube.com/embed/S96dv5yPlOc?si=awqBqT8QqsSt12r-\"", // Troque o ID do vídeo aqui
     fotos: [
-      "/images/PI3/Pi3_Home.jpeg",
-      "/images/PI3/Pi3_Planos.jpeg",
-      "/images/PI3/Pi3_Login.jpeg",
-      "/images/PI3/Pi3_AreaCliente.png",
-      "/images/PI3/Pi3_Relatorio.png"
+      { url: "/images/PI3/Pi3_Home.jpeg", desc: "Vitrine principal de livros e novidades" },
+      { url: "/images/PI3/Pi3_Login.jpeg", desc: "Interface de autenticação de usuários" },
+      { url: "/images/PI3/Pi3_CadastroProdutos.png", desc: "Interface administrativa para cadastro de títulos" },
+      { url: "/images/PI3/Pi3_Relatorio.png", desc: "Gráficos e relatórios de vendas e estoque" },
+      { url: "/images/PI3/Pi3_Acessibilidade.png", desc: "Recursos de acessibilidade implementados na plataforma" }
     ]
   },
   "pi4-agroconecta-web": {
-    nome: "PI4 - Agroconecta Web",
-    descricao: "Plataforma web para conectar microagricultores e consumidores.",
-    tecnologias: "React, Node.js e Firebase.",
-    linkCodigo: "https://github.com/SamerNassir/agroconecta-web",
-    participacao: "Integração com Google Maps API e criação do catálogo de produtos.",
-    tecnologiasPessoais: "React Hooks, Axios e Firebase Admin.",
+    nome: "PI4 - AgroConecta Web",
+    descricao: "Estudo de caso focado na otimização da cadeia de suprimentos agrícola, conectando microagricultores diretamente ao consumidor final (D2C).",
+    tecnologias: "React (Vite), Node.js e Firebase.",
+    linkCodigo: "https://github.com/SamerHalat/agroconecta-web",
+    participacao: "Atuei no Front-end com React, desenvolvendo fluxos de agendamento e a integração visual com mapas.",
+    tecnologiasPessoais: "React Hooks, Google Maps API e Firebase.",
     fotos: [
-      "/images/PI4/PI4_logo.jpeg",
-      "/images/PI4/PI4_DashBoard.jpeg",
-      "/images/PI4/PI4_mapa.jpeg",
-      "/images/PI4/PI4_Produto.jpeg"
+      { url: "/images/PI4/PI4_Agendamento.jpeg", desc: "Sistema de agendamento de retiradas e entregas" },
+      { url: "/images/PI4/PI4_AnunciarProduto.jpeg", desc: "Formulário para o agricultor postar novos produtos" },
+      { url: "/images/PI4/PI4_mapa.jpeg", desc: "Integração com mapas para localizar fazendas próximas" }
     ]
   },
   "pi5-agroconecta-mobile": {
-    nome: "PI5 - AgroConecta App Mobile",
-    descricao: "App mobile para comércio direto de alimentos frescos.",
-    tecnologias: "React Native, Node.js e PostgreSQL.",
-    linkCodigo: "https://github.com/SamerNassir/agroconecta",
-    participacao: "Implementação da autenticação JWT e lógica de estoque inteligente.",
-    tecnologiasPessoais: "React Native, Expo e Prisma ORM.",
-    videoUrl: "https://www.youtube.com/embed/MAY8xmcSaKs?si=EhyKyyF4pDmwWBwf",
+    nome: "PI5 - AgroConecta Mobile",
+    descricao: "Solução mobile avançada focada na mobilidade do produtor, apresentando perfis altamente distintos para Clientes e Agricultores.",
+    tecnologias: "React Native (Expo), Node.js, PostgreSQL e Prisma.",
+    linkCodigo: "https://github.com/SamerHalat/agroconecta",
+    participacao: "Desenvolvedor Full-stack. Criei o sistema de estoque inteligente e a autenticação segura via JWT.",
+    tecnologiasPessoais: "React Native, Prisma ORM e TypeScript.",
+    videoUrl: "https://www.youtube.com/embed/MAY8xmcSaKs?si=IAxqtlSRALMBeu7p" ,
     fotos: [
-      "/images/PI5/PI5_logo.jpeg",
-      "/images/PI5/Pi5_HomeCliente.jpeg",
-      "/images/PI5/Pi5_Mapa.jpeg",
-      "/images/PI5/Pi5_Produtos.jpeg"
+      { url: "/images/PI5/Pi5_HomeCliente.jpeg", desc: "Feed de produtos frescos para o consumidor" },
+      { url: "/images/PI5/Pi5_GerenciarProdutos.jpeg", desc: "Interface de controle de estoque e colheitas" },
+      { url: "/images/PI5/Pi5_PerfiAgricultor.jpeg", desc: "Perfil público e reputação do produtor" }
     ]
   },
-  // Adicione PI2, PI6 e Mural de Estágio seguindo o mesmo padrão...
+  "pi6-portaria": {
+    nome: "PI6 - Portaria Eletrônica",
+    descricao: "Sistema inteligente de controle de acesso para condomínios, focando em segurança e automação residencial (IoT).",
+    tecnologias: "Python (Django) e Internet das Coisas (IoT).",
+    linkCodigo: "https://github.com/SamerHalat/pi6-portaria",
+    participacao: "Fui responsável pela criação da API de controle de moradores e pelas regras de validação de acesso no backend.",
+    tecnologiasPessoais: "Python e Django REST Framework.",
+    fotos: []
+  },
+  "mural-estagio": {
+    nome: "Mural de Estágio FATEC",
+    descricao: "Refatoração completa do portal de vagas utilizado pela comunidade acadêmica para uma solução mais escalável.",
+    tecnologias: "Java (Spring Boot), React e MongoDB.",
+    linkCodigo: "https://github.com/SamerHalat/mural-vagas",
+    participacao: "Realizei a estruturação da nova API em Spring Boot e integrei as rotas com o frontend em React.",
+    tecnologiasPessoais: "Spring Boot, MongoDB e React.",
+    fotos: []
+  }
 };
 
 export default function ProjectDetail() {
@@ -68,32 +92,32 @@ export default function ProjectDetail() {
   const projeto = detalhesDosProjetos[id];
   const [imgIndex, setImgIndex] = useState(0);
 
+  // Faz a página carregar sempre no topo
+  useEffect(() => { window.scrollTo(0, 0); }, [id]);
+
   if (!projeto) {
     return (
-      <div className="container">
-        <h2>Projeto não encontrado!</h2>
-        <Link to="/">Voltar para Home</Link>
+      <div className="container" style={{textAlign: 'center', marginTop: '50px'}}>
+        <h2>Projeto não encontrado.</h2>
+        <Link to="/" className="btn-link">&larr; Voltar para a Home</Link>
       </div>
     );
   }
 
-  const proximaImg = () => {
-    setImgIndex((prev) => (prev + 1) % projeto.fotos.length);
-  };
-
-  const anteriorImg = () => {
-    setImgIndex((prev) => (prev - 1 + projeto.fotos.length) % projeto.fotos.length);
-  };
+  const nextImg = () => setImgIndex((prev) => (prev + 1) % projeto.fotos.length);
+  const prevImg = () => setImgIndex((prev) => (prev - 1 + projeto.fotos.length) % projeto.fotos.length);
 
   return (
     <div className="container">
       <header className="section-card">
-        <Link to="/" className="btn-link">&larr; Voltar</Link>
-        <h1 style={{ marginTop: '15px' }}>{projeto.nome}</h1>
+        <Link to="/" className="btn-link" style={{ display: 'inline-block', marginBottom: '16px' }}>
+          &larr; Voltar para Home
+        </Link>
+        <h1>{projeto.nome}</h1>
       </header>
 
       <main>
-        {/* Vídeo (se houver) */}
+        {/* VÍDEO (Exibido apenas se o projeto tiver a propriedade videoUrl) */}
         {projeto.videoUrl && (
           <section className="section-card">
             <h2>Demonstração em Vídeo</h2>
@@ -108,34 +132,41 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Carrossel de Imagens */}
-        <section className="section-card">
-          <h2>Galeria do Projeto</h2>
-          <div className="carousel">
-            <button onClick={anteriorImg} className="btn-carousel">❮</button>
-            <div className="carousel-img-wrapper">
-              <img src={projeto.fotos[imgIndex]} alt="Slide" />
-              <p className="img-counter">{imgIndex + 1} / {projeto.fotos.length}</p>
+        {/* CARROSSEL DE FOTOS */}
+        {projeto.fotos && projeto.fotos.length > 0 && (
+          <section className="section-card">
+            <h2>Galeria de Telas</h2>
+            <div className="carousel">
+              <button onClick={prevImg} className="btn-carousel">❮</button>
+              <div className="carousel-img-wrapper">
+                <img src={projeto.fotos[imgIndex].url} alt="Screenshot do projeto" />
+                <div className="img-caption">
+                  <p><strong>{imgIndex + 1} / {projeto.fotos.length}</strong> - {projeto.fotos[imgIndex].desc}</p>
+                </div>
+              </div>
+              <button onClick={nextImg} className="btn-carousel">❯</button>
             </div>
-            <button onClick={proximaImg} className="btn-carousel">❯</button>
-          </div>
-        </section>
+          </section>
+        )}
 
+        {/* DESCRIÇÕES GERAIS */}
         <section className="section-card">
           <h2>Sobre o Projeto</h2>
           <p>{projeto.descricao}</p>
-          <p style={{ marginTop: '10px' }}><strong>Tecnologias:</strong> {projeto.tecnologias}</p>
+          <p style={{ marginTop: '16px' }}><strong>Stack Geral:</strong> {projeto.tecnologias}</p>
         </section>
 
         <section className="section-card">
           <h2>Minha Participação</h2>
           <p>{projeto.participacao}</p>
-          <p style={{ marginTop: '10px' }}><strong>Ferramentas que usei:</strong> {projeto.tecnologiasPessoais}</p>
+          <p style={{ marginTop: '16px' }}><strong>Tecnologias que EU utilizei:</strong> {projeto.tecnologiasPessoais}</p>
         </section>
 
-        <footer style={{ textAlign: 'center', padding: '20px' }}>
-          <a href={projeto.linkCodigo} target="_blank" rel="noreferrer" className="btn-link">Ver Código no GitHub</a>
-        </footer>
+        <section className="section-card" style={{textAlign: 'center'}}>
+          <a href={projeto.linkCodigo} target="_blank" rel="noreferrer" className="btn-repo">
+            Ver Código no GitHub
+          </a>
+        </section>
       </main>
     </div>
   );

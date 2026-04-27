@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset básico e configurações de cor */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,54 +12,84 @@ body {
   padding: 32px 16px;
 }
 
-/* Estrutura principal */
 .container {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
+/* Blocos Brancos (Cards Grandes) */
 .header-card, .section-card {
   background-color: #ffffff;
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   border: 1px solid #e2e8f0;
   margin-bottom: 24px;
 }
 
-/* Cabeçalho */
-.header-card {
+/* --- NOVO: CABEÇALHO PERFIL --- */
+.profile-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alinha o texto no topo com a foto */
   gap: 32px;
 }
 
 .foto-perfil {
-  width: 120px;
-  height: 120px;
-  background-color: #cbd5e1;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 4px solid #3b82f6;
+  border: 4px solid #2563eb;
   flex-shrink: 0;
+  overflow: hidden; /* Garante que a foto não vaze o círculo */
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header-info h1 {
   font-size: 32px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: #0f172a;
 }
 
-.header-info a {
-  color: #2563eb;
+.subtitle {
+  font-size: 18px;
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  margin-bottom: 16px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Botões Sociais */
+.social-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-social {
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+  color: white;
 }
 
-.header-info a:hover {
-  text-decoration: underline;
-}
+.btn-social:hover { opacity: 0.85; transform: translateY(-2px); }
+.github { background-color: #1e293b; }
+.linkedin { background-color: #0a66c2; }
 
-/* Seções e Textos */
+
+/* --- GRID E TEXTOS GERAIS --- */
 .section-card h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -70,150 +100,133 @@ body {
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.gap-custom {
   gap: 24px;
-  margin-bottom: 24px;
 }
 
-p {
-  line-height: 1.6;
-}
+p { line-height: 1.6; }
 
-/* Experiência */
-.experience-header {
+/* --- NOVO: EXPERIÊNCIA PROFISSIONAL --- */
+.experience-card .exp-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
 }
 
-.badge {
-  background-color: #f1f5f9;
-  padding: 4px 12px;
+.experience-card h3 { color: #0f172a; font-size: 20px; }
+
+.experience-card .badge {
+  background-color: #e2e8f0;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
   color: #475569;
 }
 
-.cargo {
+.experience-card .company {
   color: #2563eb;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* Listas */
-ul {
-  list-style-type: none;
-}
-
-ul li {
+  font-weight: bold;
+  font-size: 16px;
   margin-bottom: 16px;
 }
 
-/* Cards de Projetos */
+.exp-details {
+  padding-left: 20px;
+  color: #334155;
+}
+
+.exp-details li { margin-bottom: 10px; }
+
+
+/* --- NOVO: CARDS DE PROJETOS COM LOGOS --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
 .project-card {
-  background-color: #f8fafc;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 24px;
-  border-radius: 8px;
-  transition: box-shadow 0.2s;
+  border-radius: 10px;
+  overflow: hidden; /* Mantém a imagem dentro do card */
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-.project-card h3 {
-  margin-bottom: 12px;
-  color: #0f172a;
-}
-
-.project-card p {
-  font-size: 14px;
-  margin-bottom: 16px;
-  color: #475569;
-}
-
-.btn-link {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-link:hover {
-  color: #1d4ed8;
-}
-
-/* Responsividade para Celular */
-@media (max-width: 600px) {
-  .header-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-/* Estilos do Carrossel */
-.carousel {
+.card-logo-container {
+  width: 100%;
+  height: 170px; /* Aumentei um pouco para a imagem respirar melhor */
+  background-color: #ffffff; /* Fundo branco pra mesclar com logos com fundo */
+  border-bottom: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  background: #f8fafc;
-  padding: 20px;
-  border-radius: 8px;
+  justify-content: center;
+  overflow: hidden; /* Garante que as pontas da imagem não vazem pelo arredondamento do card */
+  /* Removemos o padding para a imagem colar nas paredes do container */
 }
 
-.carousel-img-wrapper {
-  flex: 1;
-  text-align: center;
-}
-
-.carousel-img-wrapper img {
-  max-width: 100%;
-  max-height: 400px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.btn-carousel {
-  background: #2563eb;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.btn-carousel:hover {
-  background: #1d4ed8;
-}
-
-.img-counter {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #64748b;
-}
-
-/* Responsividade para Vídeo */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.card-logo {
+  width: 90%;
   height: 100%;
-  border-radius: 8px;
+  /* object-fit: contain garante que a imagem inteira apareça sem ser cortada.
+     Se preferir que a imagem aja como uma "capa" preenchendo tudo (mesmo que corte as pontinhas), 
+     basta trocar a linha abaixo para: object-fit: cover; */
+  object-fit: contain; 
+  object-position: center;
+}
+
+/* Caso o projeto não tenha logo salva, exibe um texto provisório */
+.logo-placeholder {
+  font-size: 28px;
+  font-weight: bold;
+  color: #cbd5e1;
+  letter-spacing: 2px;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 { margin-bottom: 8px; color: #0f172a; }
+.card-content p { font-size: 14px; margin-bottom: 16px; color: #475569; flex-grow: 1; }
+
+.btn-link { color: #2563eb; text-decoration: none; font-weight: 600; }
+.btn-link:hover { color: #1d4ed8; text-decoration: underline; }
+
+
+/* --- COMPONENTES DA PÁGINA DE DETALHES (Mantidos do anterior) --- */
+.btn-repo {
+  display: inline-block; background-color: #1e293b; color: #ffffff;
+  padding: 12px 24px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; transition: 0.2s;
+}
+.btn-repo:hover { background-color: #0f172a; }
+
+.carousel { display: flex; align-items: center; justify-content: space-between; gap: 15px; background: #f8fafc; padding: 20px; border-radius: 8px; }
+.carousel-img-wrapper { flex: 1; text-align: center; }
+.carousel-img-wrapper img { max-width: 100%; max-height: 400px; border-radius: 6px; border: 1px solid #e2e8f0; }
+.img-caption { margin-top: 15px; padding: 10px; background: white; border-radius: 6px; border: 1px solid #e2e8f0; color: #475569; }
+.btn-carousel { background: #2563eb; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px; flex-shrink: 0; }
+.btn-carousel:hover { background: #1d4ed8; }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Responsividade Celular */
+@media (max-width: 600px) {
+  .profile-header { flex-direction: column; text-align: center; align-items: center; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .experience-card .exp-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .social-buttons { justify-content: center; }
 }
