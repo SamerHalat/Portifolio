@@ -28,7 +28,7 @@ const detalhesDosProjetos = {
     nome: "PI3 - Clube de Assinatura Literária",
     descricao: "Plataforma completa de e-commerce para assinaturas de livros com brindes exclusivos. O destaque é o Painel Administrativo para gestão de planos e estoque.",
     tecnologias: "Node.js, Express, Handlebars e MongoDB.",
-    linkCodigo: "https://github.com/SamerHalat/pi_3semestre",
+    linkCodigo: "https://github.com/EmilyAngelG/PI_3semestre.git",
     participacao: "Responsável pelo Backend e modelagem NoSQL. Implementei o sistema de planos e foquei na acessibilidade web (UX).",
     tecnologiasPessoais: "Mongoose ORM, Express.js e Autenticação.",
     videoUrl: "https://www.youtube.com/embed/S96dv5yPlOc?si=awqBqT8QqsSt12r-\"", // Troque o ID do vídeo aqui
@@ -44,7 +44,7 @@ const detalhesDosProjetos = {
     nome: "PI4 - AgroConecta Web",
     descricao: "Estudo de caso focado na otimização da cadeia de suprimentos agrícola, conectando microagricultores diretamente ao consumidor final (D2C).",
     tecnologias: "React (Vite), Node.js e Firebase.",
-    linkCodigo: "https://github.com/SamerHalat/agroconecta-web",
+    linkCodigo: "https://github.com/orgs/PI4-AgroConecta/repositories",
     participacao: "Atuei no Front-end com React, desenvolvendo fluxos de agendamento e a integração visual com mapas.",
     tecnologiasPessoais: "React Hooks, Google Maps API e Firebase.",
     fotos: [
@@ -57,7 +57,7 @@ const detalhesDosProjetos = {
     nome: "PI5 - AgroConecta Mobile",
     descricao: "Solução mobile avançada focada na mobilidade do produtor, apresentando perfis altamente distintos para Clientes e Agricultores.",
     tecnologias: "React Native (Expo), Node.js, PostgreSQL e Prisma.",
-    linkCodigo: "https://github.com/SamerHalat/agroconecta",
+    linkCodigo: "https://github.com/orgs/PI5-AgroConecta-Mobile/repositories",
     participacao: "Desenvolvedor Full-stack. Criei o sistema de estoque inteligente e a autenticação segura via JWT.",
     tecnologiasPessoais: "React Native, Prisma ORM e TypeScript.",
     videoUrl: "https://www.youtube.com/embed/MAY8xmcSaKs?si=IAxqtlSRALMBeu7p" ,
