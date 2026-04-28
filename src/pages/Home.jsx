@@ -60,7 +60,7 @@ export default function Home() {
           <ul className="exp-details">
             <li>Liderei a refatoração da plataforma <strong>Mural de Estágios</strong>, migrando um sistema legado para uma aplicação moderna.</li>
             <li>Desenvolvi a API RESTful com <strong>Java Spring Boot</strong>, <strong>MongoDB</strong> e autenticação segura (JWT/Bcryptjs).</li>
-            <li>Construí o Front-end com <strong>React.js</strong> e <strong>Vite</strong>, implementando filtros avançados de busca.</li>
+            <li>Construí o Front-end com <strong>React.js</strong> e <strong>Vite</strong>, implementando filtros avançados de busca e dashboards analíticos.</li>
           </ul>
         </section>
 
@@ -171,15 +171,15 @@ export default function Home() {
 
         {/* 6. OUTROS PROJETOS */}
         <section className="section-card">
-          <h2>Outros Projetos</h2>
+          <h2>Outros Projetos Profissionais</h2>
           <div className="projects-grid">
             <div className="project-card">
-              <div className="card-logo-container">
-                <div className="logo-placeholder" style={{color: '#2563eb'}}>FATEC</div>
+              <div className="card-logo-container" >
+                <img src="\public\images\Mural-Estagio\fatec_logo_white.png" alt="Logo FATEC ZL" className="card-logo" style={{padding: '10px'}} />
               </div>
               <div className="card-content">
-                <h3>Mural de Estágio</h3>
-                <p>Refatoração corporativa da API e Frontend do portal de vagas e estágios da FATEC Zona Leste.</p>
+                <h3>Mural de Estágios - FATEC ZL</h3>
+                <p>Plataforma Full-Stack corporativa para a FATEC, implementando React, Spring Boot e métricas analíticas (Dashboard) para gestão de vagas e currículos.</p>
                 <Link to="/projeto/mural-estagio" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>

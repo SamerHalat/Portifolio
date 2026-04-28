@@ -105,7 +105,7 @@ const detalhesDosProjetos = {
     tecnologias: "Django, Django REST Framework, IoT",
     linguagens: "Python, SQL",
     linkCodigo: "https://github.com/SamerHalat/pi6-portaria",
-    descricao: "Sistema de Portaria Eletronica com Iot. A aplicação integra validação de hardware e software em tempo real para permitir o controle de acessos de moradores e visitantes em condomínios residenciais ou comerciais.",
+    descricao: "Sistema de Portaria Eletrônica com IoT. A aplicação integra validação de hardware e software em tempo real para permitir o controle de acessos de moradores e visitantes em condomínios residenciais ou comerciais.",
     participacao: "Em desenvolvimento ativo. Foco na estruturação inicial e arquitetura do servidor.",
     tecnologiasPessoais: "Python e Django (Em andamento).",
     fotos: []
@@ -118,7 +118,18 @@ const detalhesDosProjetos = {
     descricao: "Projeto institucional focado na modernização do portal de estágios da Fatec ZL. A solução substituiu o sistema legado, implementando lógicas profundas de filtragem (por cursos, turnos e habilidades) e segurança avançada para o painel de anunciantes.",
     participacao: "Liderei o ciclo de refatoração do sistema. No Backend, estruturei a API RESTful com Spring Boot e MongoDB. No Frontend, concebi a interface escalável usando React + Vite.",
     tecnologiasPessoais: "Spring Boot (Java), MongoDB (NoSQL), React.js e Autenticação JWT.",
-    fotos: []
+    fotos: [
+      { url: "/images/Mural-Estagio/ME_Home.jpeg", desc: "Página inicial do portal de vagas" },
+      { url: "/images/Mural-Estagio/ME_vagas.jpeg", desc: "Lista de vagas disponíveis para os alunos" },
+      { url: "/images/Mural-Estagio/ME_DetalheVagas.jpeg", desc: "Visualização detalhada das informações da vaga" },
+      { url: "/images/Mural-Estagio/ME_VagasFiltroFooter.jpeg", desc: "Sistema avançado de filtragem de vagas" },
+      { url: "/images/Mural-Estagio/ME_ADMPainelDeControle.jpeg", desc: "Dashboard administrativo e métricas" },
+      { url: "/images/Mural-Estagio/ME_ADMGerenciaVaga.jpeg", desc: "Interface para gerenciamento e moderação de vagas" },
+      { url: "/images/Mural-Estagio/ME_ADMCadastrarVagas.jpeg", desc: "Formulário de cadastro para novas oportunidades de estágio" },
+      { url: "/images/Mural-Estagio/ME_ADMGerenciarCursos.jpeg", desc: "Painel de controle para os cursos oferecidos" },
+      { url: "/images/Mural-Estagio/ME_ADMGerenciarFiltroHabilidade.jpeg", desc: "Gerenciamento das tags de habilidades para as vagas" },
+      { url: "/images/Mural-Estagio/ME_ADMCadastrarUsuario.jpeg", desc: "Interface de cadastro de novos usuários e empresas" }
+    ]
   }
 };
 
