@@ -135,7 +135,7 @@ export default function Home() {
 
             <div className="project-card">
               <div className="card-logo-container">
-                <img src="/images/PI4/PI4_logo.jpeg" alt="Logo PI4" className="card-logo" />
+                <img src="/images/PI5/PI5_logo.png" alt="Logo PI4" className="card-logo" />
               </div>
               <div className="card-content">
                 <h3>PI4: AgroConecta Web</h3>
@@ -146,7 +146,7 @@ export default function Home() {
 
             <div className="project-card">
               <div className="card-logo-container">
-                <img src="/images/PI5/PI5_logo.jpeg" alt="Logo PI5" className="card-logo" />
+                <img src="/images/PI5/PI5_logo.png" alt="Logo PI5" className="card-logo" />
               </div>
               <div className="card-content">
                 <h3>PI5: AgroConecta Mobile</h3>
