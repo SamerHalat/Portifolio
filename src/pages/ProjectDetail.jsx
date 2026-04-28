@@ -4,113 +4,120 @@ import { useState, useEffect } from 'react';
 const detalhesDosProjetos = {
   "pi1-libras": {
     nome: "PI1 - Libras: Acessibilidade Digital",
-    tecnologias: "HTML5, CSS3, JavaScript",
+    tecnologias: "Flexbox, Grid, DOM",
+    linguagens: "HTML5, CSS3, JavaScript Vanilla",
     linkCodigo: "https://github.com/SamerHalat/pi1-libras",
-    descricao: "Portal interativo focado no ensino básico de Libras e disseminação da cultura surda.",
-    participacao: "Desenvolvi a interface responsiva e a arquitetura de navegação do portal.",
-    tecnologiasPessoais: "CSS Flexbox, Manipulação de DOM e HTML Semântico.",
+    descricao: "Plataforma web de recomendação e ensino desenvolvida para democratizar o aprendizado básico de Libras. O projeto foi construído com foco estrito em acessibilidade, garantindo que o conteúdo possuísse alta clareza visual e estruturação semântica para leitores de tela.",
+    participacao: "Atuei na idealização da interface e no desenvolvimento frontend responsivo, assegurando a adaptação perfeita para navegação via desktop e dispositivos móveis.",
+    tecnologiasPessoais: "HTML Semântico, CSS (Flexbox/Grid) e Manipulação de DOM via JS.",
     fotos: [
-      { url: "/images/PI1/Pi1_home.png", desc: "Interface principal da Landing Page" },
-      { url: "/images/PI1/Pi1_Cursos.png", desc: "Catálogo de módulos de aprendizagem" },
-      { url: "/images/PI1/Pi1_SobreNos.png", desc: "Seção institucional e objetivos do projeto" },
-      { url: "/images/PI1/LogoPI1.svg", desc: "Identidade visual oficial do projeto" }
+      { url: "/images/PI1/Pi1_home.png", desc: "Landing Page com foco em usabilidade e inclusão" },
+      { url: "/images/PI1/Pi1_Cursos.png", desc: "Catálogo de módulos e recomendações de cursos" },
+      { url: "/images/PI1/Pi1_SobreNos.png", desc: "Seção institucional detalhando os objetivos do projeto" },
+      { url: "/images/PI1/LogoPI1.svg", desc: "Identidade visual do projeto" }
     ]
   },
   "pi2-estoque": {
-    nome: "PI2 - Gerenciador de Estoque",
-    tecnologias: "Java, MySQL",
+    nome: "PI2 - Gestão de Inventário",
+    tecnologias: "Node.js, Express, MySQL",
+    linguagens: "HTML5, CSS3, JavaScript",
     linkCodigo: "https://github.com/SamerHalat/pi2-estoque",
-    descricao: "Sistema de gerenciamento para controle de inventário empresarial.",
-    participacao: "Atuei na modelagem do banco de dados e lógica de backend.",
-    tecnologiasPessoais: "Java JDBC e SQL.",
+    descricao: "Sistema de gerenciamento web focado no controle dinâmico de entrada e saída de produtos. A aplicação garante a visualização do inventário em tempo real, automatizando as métricas de produtos em estoque.",
+    participacao: "Atuei no desenvolvimento estrutural da aplicação, interligando a visualização frontend com as lógicas de negócio e rotas configuradas no servidor Node.js.",
+    tecnologiasPessoais: "Node.js, lógica de rotas, SQL básico e desenvolvimento Web (HTML/CSS).",
     fotos: []
   },
   "pi3-prateleira": {
-    nome: "PI3 - Clube de Assinatura Literária",
-    tecnologias: "Node.js, Express, Handlebars, MongoDB",
+    nome: "PI3 - Clube Literário (Assinaturas)",
+    tecnologias: "Node.js, Express, Handlebars, MongoDB (Mongoose)",
+    linguagens: "JavaScript, HTML, CSS",
     linkCodigo: "https://github.com/SamerHalat/pi_3semestre",
-    descricao: "Plataforma completa de e-commerce para assinaturas de livros com brindes exclusivos.",
-    participacao: "Responsável pelo Backend e modelagem NoSQL. Implementei o sistema de planos e a área administrativa.",
-    tecnologiasPessoais: "Mongoose ORM, Express.js e Autenticação.",
+    descricao: "E-commerce robusto desenvolvido para um clube de assinatura de livros. O sistema gerencia diferentes níveis de planos (mensais a trimestrais) e conta com um Painel Administrativo completo para controle de estoque, assinantes e emissão de relatórios de métricas.",
+    participacao: "Responsável pelo Front-end e desenvolvimento das rotas da API em Node.js e pela modelagem do banco de dados NoSQL pelo MongoDB. Implementei o sistema de autenticação, integração das views com Handlebars e os relatórios analíticos.",
+    tecnologiasPessoais: "Mongoose (NoSQL), Express.js, Express-Session e Handlebars.",
     videoUrl: "https://www.youtube.com/embed/SUBSTITUA_PELO_ID_AQUI", 
     fotos: [
       { url: "/images/PI3/Pi3_Home.jpeg", desc: "Vitrine principal do clube de assinatura" },
-      { url: "/images/PI3/Pi3_Home2.png", desc: "Segunda variante da interface principal" },
-      { url: "/images/PI3/Pi3_HomeMobile.jpeg", desc: "Visualização da interface em dispositivos móveis" },
-      { url: "/images/PI3/Pi3_Planos.jpeg", desc: "Seleção de planos de assinatura (Mensal/Bimestral)" },
-      { url: "/images/PI3/Pi3_Login.jpeg", desc: "Tela de autenticação de utilizadores" },
-      { url: "/images/PI3/Pi3_AreaCliente.png", desc: "Dashboard do assinante para gestão de conta" },
-      { url: "/images/PI3/Pi3_CadastroProdutos.png", desc: "Interface administrativa para gestão de estoque" },
-      { url: "/images/PI3/Pi3_Relatorio.png", desc: "Painel de métricas e performance de vendas" },
-      { url: "/images/PI3/Pi3_LoginAdm.png", desc: "Portal de acesso restrito para administradores" },
-      { url: "/images/PI3/Pi3_Acessibilidade.png", desc: "Recursos de inclusão e acessibilidade implementados" },
+      { url: "/images/PI3/Pi3_Home2.png", desc: "Variação de interface de navegação" },
+      { url: "/images/PI3/Pi3_HomeMobile.jpeg", desc: "Responsividade da interface em smartphones" },
+      { url: "/images/PI3/Pi3_Planos.jpeg", desc: "Seleção dinâmica de planos recorrentes" },
+      { url: "/images/PI3/Pi3_Login.jpeg", desc: "Tela segura de autenticação" },
+      { url: "/images/PI3/Pi3_AreaCliente.png", desc: "Dashboard exclusivo do assinante" },
+      { url: "/images/PI3/Pi3_CadastroProdutos.png", desc: "Gestão de inventário no painel do administrador" },
+      { url: "/images/PI3/Pi3_Relatorio.png", desc: "Painel de métricas e performance de assinaturas" },
+      { url: "/images/PI3/Pi3_LoginAdm.png", desc: "Acesso restrito para administradores" },
+      { url: "/images/PI3/Pi3_Acessibilidade.png", desc: "Componentes nativos de acessibilidade" },
       { url: "/images/PI3/Pi3_Logo.png", desc: "Logotipo oficial da plataforma" }
     ]
   },
   "pi4-agroconecta-web": {
-    nome: "PI4 - AgroConecta Web",
-    tecnologias: "React (Vite), Node.js, Firebase",
+    nome: "PI4 - AgroConecta Web (Marketplace D2C)",
+    tecnologias: "React (Vite), Node.js, Firebase Admin, Leaflet Maps, VLibras",
+    linguagens: "JavaScript, HTML5, CSS3",
     linkCodigo: "https://github.com/SamerHalat/agroconecta-web",
-    descricao: "Marketplace para aproximar pequenos produtores agrícolas do consumidor final (D2C).",
-    participacao: "Desenvolvi os fluxos de agendamento e a integração com mapas.",
-    tecnologiasPessoais: "React Hooks, Google Maps API e Firebase.",
+    descricao: "Plataforma Web modelo Direct-to-Consumer (D2C) para conectar microagricultores diretamente a compradores locais. O sistema oferece geolocalização por mapas para exibição de fazendas e integra a ferramenta VLibras para total acessibilidade.",
+    participacao: "Desenvolvedor Front-end responsável pela integração da API de mapas e pela construção da interface interativa em React, facilitando a navegação por catálogos e o agendamento de retiradas.",
+    tecnologiasPessoais: "React Hooks, Axios, integração de Mapas e plugin VLibras.",
     fotos: [
-      { url: "/images/PI4/PI4_mapa.jpeg", desc: "Mapa interativo para geolocalização de produtores" },
-      { url: "/images/PI4/PI4_DashBoard.jpeg", desc: "Painel de controlo com indicadores de vendas" },
-      { url: "/images/PI4/PI4_Agendamento.jpeg", desc: "Sistema de reserva de horários para recolha" },
-      { url: "/images/PI4/PI4_AnunciarProduto.jpeg", desc: "Formulário de listagem de novos produtos agrícolas" },
-      { url: "/images/PI4/PI4_Produto.jpeg", desc: "Visualização de produto no catálogo" },
-      { url: "/images/PI4/PI4_ProdutoDetalhe.jpeg", desc: "Ficha detalhada com origem e certificações" },
-      { url: "/images/PI4/PI4_Perfil.jpeg", desc: "Gestão de perfil do utilizador" },
-      { url: "/images/PI4/PI4_PerfilCliente.jpeg", desc: "Histórico e preferências do consumidor" },
-      { url: "/images/PI4/PI4_LoginCliente.jpeg", desc: "Fluxo de login para compradores" },
-      { url: "/images/PI4/PI4_LoginAgricultor.jpeg", desc: "Acesso exclusivo para o produtor rural" },
-      { url: "/images/PI4/PI4_loginEscolha.jpeg", desc: "Triagem inicial de tipo de utilizador" },
-      { url: "/images/PI4/PI4_logo.jpeg", desc: "Branding AgroConecta Web" }
+      { url: "/images/PI4/PI4_mapa.jpeg", desc: "Geolocalização interativa de fazendas" },
+      { url: "/images/PI4/PI4_DashBoard.jpeg", desc: "Painel de controle com indicadores de anúncios" },
+      { url: "/images/PI4/PI4_Agendamento.jpeg", desc: "Sistema de reservas e horários para retirada" },
+      { url: "/images/PI4/PI4_AnunciarProduto.jpeg", desc: "Formulário de listagem rápida para produtores" },
+      { url: "/images/PI4/PI4_Produto.jpeg", desc: "Vitrine de produtos recém-colhidos" },
+      { url: "/images/PI4/PI4_ProdutoDetalhe.jpeg", desc: "Ficha detalhada com origem e produtor responsável" },
+      { url: "/images/PI4/PI4_Perfil.jpeg", desc: "Gestão de perfil da conta" },
+      { url: "/images/PI4/PI4_PerfilCliente.jpeg", desc: "Preferências de conta do cliente final" },
+      { url: "/images/PI4/PI4_LoginCliente.jpeg", desc: "Fluxo de login de consumidores" },
+      { url: "/images/PI4/PI4_LoginAgricultor.jpeg", desc: "Acesso exclusivo para agricultores parceiros" },
+      { url: "/images/PI4/PI4_loginEscolha.jpeg", desc: "Página de triagem de perfis" },
+      { url: "/images/PI4/PI4_logo.jpeg", desc: "Logotipo AgroConecta Web" }
     ]
   },
   "pi5-agroconecta-mobile": {
     nome: "PI5 - AgroConecta Mobile",
-    tecnologias: "React Native, Expo, Node.js, Prisma, PostgreSQL",
+    tecnologias: "React Native (Expo), Prisma ORM, PostgreSQL, Socket.io, JWT (Bcryptjs)",
+    linguagens: "TypeScript, JavaScript, SQL",
     linkCodigo: "https://github.com/SamerHalat/agroconecta",
-    descricao: "Solução avançada mobile com perfis distintos para clientes e agricultores.",
-    participacao: "Implementei a lógica de sincronização de estoque e autenticação JWT.",
-    tecnologiasPessoais: "React Native, Prisma ORM e TypeScript.",
+    descricao: "Evolução multiplataforma do ecossistema AgroConecta. A aplicação Mobile introduziu uma arquitetura avançada de dados. O destaque é a gestão inteligente de estoque: algoritmos evitam duplicidade somando automaticamente as quantidades de colheitas cadastradas que possuem o mesmo padrão e dono.",
+    participacao: "Atuei como Desenvolvedor Full-Stack. No Front-End, utilizei bibliotecas do React Native como Maps, notificações push e bibliotecas gráficas, estruturando as telas principais (Home, Dashboard e CRUDs). No Back-End, implementei o Prisma ORM, gerenciamento do PostgreSQL e a segurança com JWT.",
+    tecnologiasPessoais: "React Native, TypeScript, Prisma ORM, JWT e PostgreSQL.",
     videoUrl: "https://www.youtube.com/embed/SUBSTITUA_PELO_ID_AQUI",
     fotos: [
-      { url: "/images/PI5/Pi5_HomeCliente.jpeg", desc: "Feed principal de produtos frescos no telemóvel" },
-      { url: "/images/PI5/Pi5_Mapa.jpeg", desc: "Navegação por mapa para encontrar fazendas próximas" },
-      { url: "/images/PI5/Pi5_GerenciarProdutos.jpeg", desc: "Gestão de colheita e estoque via mobile" },
-      { url: "/images/PI5/Pi5_HomeAgricultor.jpeg", desc: "Painel do produtor: vendas e agendamentos" },
-      { url: "/images/PI5/Pi5_HomeAgricultor1.jpeg", desc: "Visão secundária do dashboard de produção" },
-      { url: "/images/PI5/Pi5_HomeAgricultor2.jpeg", desc: "Gestão de encomendas recebidas" },
-      { url: "/images/PI5/Pi5_Produtos.jpeg", desc: "Catálogo mobile de hortifrúti" },
-      { url: "/images/PI5/Pi5_DetalheProduto.jpeg", desc: "Informações sobre colheita e produtor" },
-      { url: "/images/PI5/Pi5_AgendamentoCliente.jpeg", desc: "Confirmação de levantamento de pedido" },
-      { url: "/images/PI5/Pi5_Agendamentos.jpeg", desc: "Listagem geral de reservas" },
-      { url: "/images/PI5/Pi5_CadastrarProdutos.jpeg", desc: "Fluxo de inclusão de nova oferta" },
-      { url: "/images/PI5/Pi5_PerfiAgricultor.jpeg", desc: "Perfil público do agricultor com avaliações" },
-      { url: "/images/PI5/Pi5_PerfilCliente.jpeg", desc: "Configurações de conta do cliente" },
-      { url: "/images/PI5/PI5_logo.jpeg", desc: "Logo da aplicação em formato retangular" },
-      { url: "/images/PI5/PI5_logo.png", desc: "Logo oficial AgroConecta Mobile" }
+      { url: "/images/PI5/Pi5_HomeCliente.jpeg", desc: "Feed de alimentos frescos adaptado ao formato Mobile" },
+      { url: "/images/PI5/Pi5_Mapa.jpeg", desc: "Integração nativa de mapas para busca local" },
+      { url: "/images/PI5/Pi5_GerenciarProdutos.jpeg", desc: "Painel mobile de controle inteligente de colheitas" },
+      { url: "/images/PI5/Pi5_HomeAgricultor.jpeg", desc: "Visão geral do negócio para o agricultor" },
+      { url: "/images/PI5/Pi5_HomeAgricultor1.jpeg", desc: "Métricas secundárias de acompanhamento" },
+      { url: "/images/PI5/Pi5_HomeAgricultor2.jpeg", desc: "Acompanhamento de encomendas em tempo real" },
+      { url: "/images/PI5/Pi5_Produtos.jpeg", desc: "Catálogo de hortifrúti" },
+      { url: "/images/PI5/Pi5_DetalheProduto.jpeg", desc: "Informações sobre certificações e produtor" },
+      { url: "/images/PI5/Pi5_AgendamentoCliente.jpeg", desc: "Fluxo simplificado de reserva e retirada" },
+      { url: "/images/PI5/Pi5_Agendamentos.jpeg", desc: "Histórico geral de reservas" },
+      { url: "/images/PI5/Pi5_CadastrarProdutos.jpeg", desc: "Cadastro rápido de safras pela câmera do dispositivo" },
+      { url: "/images/PI5/Pi5_PerfiAgricultor.jpeg", desc: "Perfil público com avaliações do produtor" },
+      { url: "/images/PI5/Pi5_PerfilCliente.jpeg", desc: "Área de configurações do cliente" },
+      { url: "/images/PI5/PI5_logo.jpeg", desc: "Logo adaptado para resoluções mobile" },
+      { url: "/images/PI5/PI5_logo.png", desc: "Marca oficial AgroConecta Mobile" }
     ]
   },
   "pi6-portaria": {
-    nome: "PI6 - Portaria Eletrônica",
-    tecnologias: "Python, Django, IoT",
+    nome: "PI6 - Portaria Inteligente IoT",
+    tecnologias: "Django, Django REST Framework, IoT",
+    linguagens: "Python, SQL",
     linkCodigo: "https://github.com/SamerHalat/pi6-portaria",
-    descricao: "Sistema inteligente de segurança e controle de acesso com IoT.",
-    participacao: "Criação da API de controle de moradores e logs de acesso.",
-    tecnologiasPessoais: "Django REST Framework.",
+    descricao: "Sistema de Portaria Eletronica com Iot. A aplicação integra validação de hardware e software em tempo real para permitir o controle de acessos de moradores e visitantes em condomínios residenciais ou comerciais.",
+    participacao: "Em desenvolvimento ativo. Foco na estruturação inicial e arquitetura do servidor.",
+    tecnologiasPessoais: "Python e Django (Em andamento).",
     fotos: []
   },
   "mural-estagio": {
     nome: "Mural de Estágio FATEC",
-    tecnologias: "Java Spring Boot, React, MongoDB",
+    tecnologias: "Spring Boot, React.js, Vite, MongoDB, Autenticação JWT",
+    linguagens: "Java, JavaScript, HTML5, CSS3",
     linkCodigo: "https://github.com/SamerHalat/mural-vagas",
-    descricao: "Plataforma profissional para substituição do sistema legado de vagas da Fatec ZL.",
-    participacao: "Refatoração total do backend e criação da interface em React.",
-    tecnologiasPessoais: "Spring Boot, MongoDB e JWT.",
+    descricao: "Projeto institucional focado na modernização do portal de estágios da Fatec ZL. A solução substituiu o sistema legado, implementando lógicas profundas de filtragem (por cursos, turnos e habilidades) e segurança avançada para o painel de anunciantes.",
+    participacao: "Liderei o ciclo de refatoração do sistema. No Backend, estruturei a API RESTful com Spring Boot e MongoDB. No Frontend, concebi a interface escalável usando React + Vite.",
+    tecnologiasPessoais: "Spring Boot (Java), MongoDB (NoSQL), React.js e Autenticação JWT.",
     fotos: []
   }
 };
@@ -120,15 +127,19 @@ export default function ProjectDetail() {
   const projeto = detalhesDosProjetos[id];
   const [imgIndex, setImgIndex] = useState(0);
 
+  // Faz o scroll voltar para o topo sempre que entra na página
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
-  if (!projeto) return (
-    <div className="container" style={{textAlign: 'center', marginTop: '50px'}}>
-      <h2>Projeto não encontrado.</h2>
-      <Link to="/" className="btn-link">Voltar para Home</Link>
-    </div>
-  );
+  if (!projeto) {
+    return (
+      <div className="container" style={{textAlign: 'center', marginTop: '50px'}}>
+        <h2>Projeto não encontrado.</h2>
+        <Link to="/" className="btn-link">Voltar para Home</Link>
+      </div>
+    );
+  }
 
+  // Funções para navegar no carrossel
   const next = () => setImgIndex((prev) => (prev + 1) % projeto.fotos.length);
   const prev = () => setImgIndex((prev) => (prev - 1 + projeto.fotos.length) % projeto.fotos.length);
 
@@ -140,6 +151,7 @@ export default function ProjectDetail() {
       </header>
 
       <main>
+        {/* Renderiza o vídeo se houver link */}
         {projeto.videoUrl && (
           <section className="section-card">
             <h2>Demonstração em Vídeo</h2>
@@ -149,13 +161,14 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {projeto.fotos.length > 0 && (
+        {/* Renderiza o carrossel se houver fotos */}
+        {projeto.fotos && projeto.fotos.length > 0 && (
           <section className="section-card">
-            <h2>Galeria Completa</h2>
+            <h2>Galeria de Telas</h2>
             <div className="carousel">
               <button onClick={prev} className="btn-carousel">❮</button>
               <div className="carousel-img-wrapper">
-                <img src={projeto.fotos[imgIndex].url} alt="Screenshot" />
+                <img src={projeto.fotos[imgIndex].url} alt={`Screenshot ${imgIndex + 1}`} />
                 <div className="img-caption">
                   <p><strong>{imgIndex + 1} / {projeto.fotos.length}</strong> - {projeto.fotos[imgIndex].desc}</p>
                 </div>
@@ -165,20 +178,29 @@ export default function ProjectDetail() {
           </section>
         )}
 
+        {/* Textos Detalhados */}
         <section className="section-card">
           <h2>Sobre o Projeto</h2>
           <p>{projeto.descricao}</p>
-          <p style={{marginTop: '15px'}}><strong>Tecnologias:</strong> {projeto.tecnologias}</p>
+          
+          <div style={{marginTop: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px'}}>
+            <div>
+              <p><strong>Stack Geral:</strong><br/>{projeto.tecnologias}</p>
+            </div>
+            <div>
+              <p><strong>Linguagens:</strong><br/>{projeto.linguagens}</p>
+            </div>
+          </div>
         </section>
 
         <section className="section-card">
           <h2>Minha Participação</h2>
           <p>{projeto.participacao}</p>
-          <p style={{marginTop: '15px'}}><strong>O que EU utilizei:</strong> {projeto.tecnologiasPessoais}</p>
+          <p style={{marginTop: '15px'}}><strong>Ferramentas e Lógicas que apliquei:</strong> {projeto.tecnologiasPessoais}</p>
         </section>
 
         <div style={{textAlign: 'center', marginBottom: '40px'}}>
-          <a href={projeto.linkCodigo} target="_blank" rel="noreferrer" className="btn-repo">Ver no GitHub</a>
+          <a href={projeto.linkCodigo} target="_blank" rel="noreferrer" className="btn-repo">Acessar Repositório no GitHub</a>
         </div>
       </main>
     </div>

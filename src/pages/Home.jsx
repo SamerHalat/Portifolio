@@ -36,20 +36,20 @@ export default function Home() {
             <h2>Sobre Mim</h2>
             <p>
               Desenvolvedor Full-Stack Júnior em formação, especializado em arquitetura MERN/PERN (Node.js, Express, React, TypeScript). 
-              Possuo experiência em refatoração e desenvolvimento de soluções críticas, com foco na criação de APIs RESTful escaláveis, seguras (JWT/Bcryptjs) e interfaces web/mobile modernas, aplicando metodologias ágeis e princípios sólidos de engenharia de software.
+              Possuo experiência em refatoração e desenvolvimento de soluções críticas, com foco na criação de APIs RESTful escaláveis, seguras e interfaces web/mobile modernas, aplicando metodologias ágeis e princípios sólidos de engenharia de software.
             </p>
           </section>
 
           <section className="section-card">
-            <h2>Formação e Idiomas</h2>
+            <h2>Formação Acadêmica</h2>
             <p><strong>Curso:</strong> Desenvolvimento de Software Multiplataforma</p>
-            <p><strong>Instituição:</strong> FATEC Zona Leste (Previsão: 2026)</p>
+            <p><strong>Instituição:</strong> FATEC Zona Leste</p>
+            <p><strong>Período:</strong> Início em 2023/2 — Previsão em 2026/2</p>
             <p style={{ marginTop: '10px' }}><strong>Idiomas:</strong> Português (Nativo) e Inglês (Intermediário)</p>
-            <p style={{ marginTop: '10px' }}><strong>Certificações:</strong> Google Cloud Computing Foundations, Design Patterns Básico</p>
           </section>
         </div>
 
-        {/* 3. EXPERIÊNCIA PROFISSIONAL (Card Grande) */}
+        {/* 3. EXPERIÊNCIA PROFISSIONAL */}
         <section className="section-card experience-card">
           <h2>Experiência Profissional</h2>
           <div className="exp-header">
@@ -58,14 +58,44 @@ export default function Home() {
           </div>
           <p className="company">Fatec Zona Leste</p>
           <ul className="exp-details">
-            <li>Atuei como Desenvolvedor Full-Stack no projeto interno <strong>Mural de Estágios</strong>, substituindo o sistema legado baseado em Blogger.</li>
-            <li><strong>Arquitetura Backend:</strong> Desenvolvi a API RESTful utilizando Java com Spring Boot, implementando persistência de dados no MongoDB e garantindo a segurança das rotas com JWT e Bcryptjs.</li>
-            <li><strong>Front-End:</strong> Criei uma interface moderna, rápida e responsiva utilizando React.js e Vite, construindo toda a lógica complexa de filtragem de vagas.</li>
-            <li><strong>Resultado:</strong> Profissionalização da divulgação de vagas da instituição através de uma aplicação robusta, elevando a experiência do usuário e otimizando a gestão administrativa.</li>
+            <li>Liderei a refatoração da plataforma <strong>Mural de Estágios</strong>, migrando um sistema legado para uma aplicação moderna.</li>
+            <li>Desenvolvi a API RESTful com <strong>Java Spring Boot</strong>, <strong>MongoDB</strong> e autenticação segura (JWT/Bcryptjs).</li>
+            <li>Construí o Front-end com <strong>React.js</strong> e <strong>Vite</strong>, implementando filtros avançados de busca.</li>
           </ul>
         </section>
 
-        {/* 4. PROJETOS INTEGRADORES COM LOGOS */}
+        {/* 4. CERTIFICAÇÕES E CURSOS */}
+        <section className="section-card">
+          <h2>Certificações e Extensão</h2>
+          <div className="cert-list">
+            <div className="cert-item">
+              <strong>Google Cloud Computing Foundations</strong>
+              <span>Google • Emitida em nov de 2025</span>
+            </div>
+            <div className="cert-item">
+              <strong>UX Básico</strong>
+              <span>Centro Paula Souza • Emitida em nov de 2025</span>
+              <span>ID: a682c1f6-bdd5-44a0-86a9-8b6792aa7e83</span>
+            </div>
+            <div className="cert-item">
+              <strong>Design Patterns Básico</strong>
+              <span>Centro Paula Souza • Emitida em mai de 2025</span>
+              <span>ID: a2d4c7e2-a319-4afd-9589-a9d2d93b4444</span>
+            </div>
+            <div className="cert-item">
+              <strong>Desenvolvedor Front-End</strong>
+              <span>Centro Paula Souza • Emitida em abr de 2025</span>
+              <span>ID: 4bce6d01-5220-4111-b4bb-6067c3297933</span>
+            </div>
+            <div className="cert-item">
+              <strong>Front-End Básico</strong>
+              <span>Centro Paula Souza • Emitida em fev de 2025</span>
+              <span>ID: 843f992d-f93a-4ad7-bd89-17ae700bb524</span>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. PROJETOS INTEGRADORES */}
         <section className="section-card">
           <h2>Projetos Integradores (PI)</h2>
           <div className="projects-grid">
@@ -75,8 +105,8 @@ export default function Home() {
                 <img src="/images/PI1/LogoPI1.svg" alt="Logo PI1" className="card-logo" />
               </div>
               <div className="card-content">
-                <h3>PI1: Libras</h3>
-                <p>Projeto focado em acessibilidade e tradução básica de Libras.</p>
+                <h3>PI1: Libras Acessível</h3>
+                <p>Plataforma web interativa para ensino e recomendação de cursos de Libras, com foco em inclusão e acessibilidade.</p>
                 <Link to="/projeto/pi1-libras" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
@@ -86,8 +116,8 @@ export default function Home() {
                 <div className="logo-placeholder">PI2</div>
               </div>
               <div className="card-content">
-                <h3>PI2: Gerenciador de Estoque</h3>
-                <p>Sistema para controle e gestão de inventários.</p>
+                <h3>PI2: Gestão de Inventário</h3>
+                <p>Sistema web para controle de estoque e gestão de inventários, estruturado com Node.js, HTML e CSS.</p>
                 <Link to="/projeto/pi2-estoque" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
@@ -98,29 +128,29 @@ export default function Home() {
               </div>
               <div className="card-content">
                 <h3>PI3: Clube Literário</h3>
-                <p>Plataforma para assinaturas de livros com painel administrativo.</p>
+                <p>E-commerce completo para clube de assinatura de livros com painel administrativo (Node.js, Handlebars e MongoDB).</p>
                 <Link to="/projeto/pi3-prateleira" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
 
             <div className="project-card">
               <div className="card-logo-container">
-                <img src="/images/PI5/PI5_logo.png" alt="Logo PI4" className="card-logo" />
+                <img src="/images/PI4/PI4_logo.jpeg" alt="Logo PI4" className="card-logo" />
               </div>
               <div className="card-content">
-                <h3>PI4: Agroconecta Web</h3>
-                <p>Plataforma Web D2C para conexão no setor agrícola.</p>
+                <h3>PI4: AgroConecta Web</h3>
+                <p>Marketplace Web D2C para conectar microagricultores, com mapas interativos, plugin VLibras e React+Vite.</p>
                 <Link to="/projeto/pi4-agroconecta-web" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
 
             <div className="project-card">
               <div className="card-logo-container">
-                <img src="/images/PI5/PI5_logo.png" alt="Logo PI5" className="card-logo" />
+                <img src="/images/PI5/PI5_logo.jpeg" alt="Logo PI5" className="card-logo" />
               </div>
               <div className="card-content">
                 <h3>PI5: AgroConecta Mobile</h3>
-                <p>Versão Mobile do sistema de conexão agrícola.</p>
+                <p>Aplicação Mobile D2C com gestão inteligente de colheitas, autenticação JWT, PostgreSQL/Prisma e React Native.</p>
                 <Link to="/projeto/pi5-agroconecta-mobile" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
@@ -131,7 +161,7 @@ export default function Home() {
               </div>
               <div className="card-content">
                 <h3>PI6: Portaria Eletrônica</h3>
-                <p>Sistema inteligente de segurança e controle de acesso (IoT).</p>
+                <p>Solução IoT para controle de acesso condominial seguro, utilizando validação em tempo real com API em Django.</p>
                 <Link to="/projeto/pi6-portaria" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
@@ -139,7 +169,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. OUTROS PROJETOS */}
+        {/* 6. OUTROS PROJETOS */}
         <section className="section-card">
           <h2>Outros Projetos</h2>
           <div className="projects-grid">
@@ -149,7 +179,7 @@ export default function Home() {
               </div>
               <div className="card-content">
                 <h3>Mural de Estágio</h3>
-                <p>Refatoração do portal de vagas e estágios da FATEC Zona Leste.</p>
+                <p>Refatoração corporativa da API e Frontend do portal de vagas e estágios da FATEC Zona Leste.</p>
                 <Link to="/projeto/mural-estagio" className="btn-link">Ver detalhes &rarr;</Link>
               </div>
             </div>
