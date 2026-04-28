@@ -175,7 +175,7 @@ export default function Home() {
           <div className="projects-grid">
             <div className="project-card">
               <div className="card-logo-container" >
-                <img src="\public\images\Mural-Estagio\fatec_logo_white.png" alt="Logo FATEC ZL" className="card-logo" style={{padding: '10px'}} />
+                <img src="/images/Mural-Estagio/fatec_logo_white.png" alt="Logo FATEC ZL" className="card-logo" style={{padding: '10px'}} />
               </div>
               <div className="card-content">
                 <h3>Mural de Estágios - FATEC ZL</h3>
