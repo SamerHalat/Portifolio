@@ -35,7 +35,7 @@ const detalhesDosProjetos = {
     descricao: "E-commerce robusto desenvolvido para um clube de assinatura de livros. O sistema gerencia diferentes níveis de planos (mensais a trimestrais) e conta com um Painel Administrativo completo para controle de estoque, assinantes e emissão de relatórios de métricas.",
     participacao: "Responsável pelo Front-end e desenvolvimento das rotas da API em Node.js e pela modelagem do banco de dados NoSQL pelo MongoDB. Implementei o sistema de autenticação, integração das views com Handlebars e os relatórios analíticos.",
     tecnologiasPessoais: "Mongoose (NoSQL), Express.js, Express-Session e Handlebars.",
-    videoUrl: "https://www.youtube.com/embed/SUBSTITUA_PELO_ID_AQUI", 
+    videoUrl: "https://www.youtube.com/embed/S96dv5yPlOc?si=Azq-4dfmERxwvosP", 
     fotos: [
       { url: "/images/PI3/Pi3_Home.jpeg", desc: "Vitrine principal do clube de assinatura" },
       { url: "/images/PI3/Pi3_Home2.png", desc: "Variação de interface de navegação" },
@@ -81,7 +81,7 @@ const detalhesDosProjetos = {
     descricao: "Evolução multiplataforma do ecossistema AgroConecta. A aplicação Mobile introduziu uma arquitetura avançada de dados. O destaque é a gestão inteligente de estoque: algoritmos evitam duplicidade somando automaticamente as quantidades de colheitas cadastradas que possuem o mesmo padrão e dono.",
     participacao: "Atuei como Desenvolvedor Full-Stack. No Front-End, utilizei bibliotecas do React Native como Maps, notificações push e bibliotecas gráficas, estruturando as telas principais (Home, Dashboard e CRUDs). No Back-End, implementei o Prisma ORM, gerenciamento do PostgreSQL e a segurança com JWT.",
     tecnologiasPessoais: "React Native, TypeScript, Prisma ORM, JWT e PostgreSQL.",
-    videoUrl: "https://www.youtube.com/embed/SUBSTITUA_PELO_ID_AQUI",
+    videoUrl: "https://www.youtube.com/embed/MAY8xmcSaKs?si=8y9Nvg-GPfwKpUnA" ,
     fotos: [
       { url: "/images/PI5/Pi5_HomeCliente.jpeg", desc: "Feed de alimentos frescos adaptado ao formato Mobile" },
       { url: "/images/PI5/Pi5_Mapa.jpeg", desc: "Integração nativa de mapas para busca local" },
