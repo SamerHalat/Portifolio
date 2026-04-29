@@ -11,7 +11,7 @@ export default function Home() {
         </div>
         <div className="header-info">
           <h1>Samer Nassir Halat</h1>
-          <h2 className="subtitle">Desenvolvedor Full-Stack (MERN/PERN)</h2>
+          <h2 className="subtitle">Desenvolvedor Full-Stack </h2>
           
           <div className="contact-info">
             <p>📧 samerhalat123@outlook.com</p>
@@ -35,7 +35,7 @@ export default function Home() {
           <section className="section-card">
             <h2>Sobre Mim</h2>
             <p>
-              Desenvolvedor Full-Stack Júnior em formação, especializado em arquitetura MERN/PERN (Node.js, Express, React, TypeScript). 
+              Desenvolvedor Full-Stack Júnior em formação, prinicipalmente em arquitetura MERN/PERN (Node.js, Express, React, TypeScript). 
               Possuo experiência em refatoração e desenvolvimento de soluções críticas, com foco na criação de APIs RESTful escaláveis, seguras e interfaces web/mobile modernas, aplicando metodologias ágeis e princípios sólidos de engenharia de software.
             </p>
           </section>

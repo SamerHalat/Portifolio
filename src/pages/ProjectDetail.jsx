@@ -6,7 +6,7 @@ const detalhesDosProjetos = {
     nome: "PI1 - Libras: Acessibilidade Digital",
     tecnologias: "Flexbox, Grid, DOM",
     linguagens: "HTML5, CSS3, JavaScript Vanilla",
-    linkCodigo: "https://github.com/SamerHalat/pi1-libras",
+    linkCodigo: "https://github.com/Kendi9866/PROJETO_PI",
     descricao: "Plataforma web de recomendação e ensino desenvolvida para democratizar o aprendizado básico de Libras. O projeto foi construído com foco estrito em acessibilidade, garantindo que o conteúdo possuísse alta clareza visual e estruturação semântica para leitores de tela.",
     participacao: "Atuei na idealização da interface e no desenvolvimento frontend responsivo, assegurando a adaptação perfeita para navegação via desktop e dispositivos móveis.",
     tecnologiasPessoais: "HTML Semântico, CSS (Flexbox/Grid) e Manipulação de DOM via JS.",
@@ -31,7 +31,7 @@ const detalhesDosProjetos = {
     nome: "PI3 - Clube Literário (Assinaturas)",
     tecnologias: "Node.js, Express, Handlebars, MongoDB (Mongoose)",
     linguagens: "JavaScript, HTML, CSS",
-    linkCodigo: "https://github.com/SamerHalat/pi_3semestre",
+    linkCodigo: "https://github.com/SamerHalat/PI3_Prateleira.git",
     descricao: "E-commerce robusto desenvolvido para um clube de assinatura de livros. O sistema gerencia diferentes níveis de planos (mensais a trimestrais) e conta com um Painel Administrativo completo para controle de estoque, assinantes e emissão de relatórios de métricas.",
     participacao: "Responsável pelo Front-end e desenvolvimento das rotas da API em Node.js e pela modelagem do banco de dados NoSQL pelo MongoDB. Implementei o sistema de autenticação, integração das views com Handlebars e os relatórios analíticos.",
     tecnologiasPessoais: "Mongoose (NoSQL), Express.js, Express-Session e Handlebars.",
@@ -54,7 +54,7 @@ const detalhesDosProjetos = {
     nome: "PI4 - AgroConecta Web (Marketplace D2C)",
     tecnologias: "React (Vite), Node.js, Firebase Admin, Leaflet Maps, VLibras",
     linguagens: "JavaScript, HTML5, CSS3",
-    linkCodigo: "https://github.com/SamerHalat/agroconecta-web",
+    linkCodigo: "https://github.com/orgs/PI4-AgroConecta/repositories",
     descricao: "Plataforma Web modelo Direct-to-Consumer (D2C) para conectar microagricultores diretamente a compradores locais. O sistema oferece geolocalização por mapas para exibição de fazendas e integra a ferramenta VLibras para total acessibilidade.",
     participacao: "Desenvolvedor Front-end responsável pela integração da API de mapas e pela construção da interface interativa em React, facilitando a navegação por catálogos e o agendamento de retiradas.",
     tecnologiasPessoais: "React Hooks, Axios, integração de Mapas e plugin VLibras.",
@@ -77,7 +77,7 @@ const detalhesDosProjetos = {
     nome: "PI5 - AgroConecta Mobile",
     tecnologias: "React Native (Expo), Prisma ORM, PostgreSQL, Socket.io, JWT (Bcryptjs)",
     linguagens: "TypeScript, JavaScript, SQL",
-    linkCodigo: "https://github.com/SamerHalat/agroconecta",
+    linkCodigo: "https://github.com/orgs/PI5-AgroConecta-Mobile/repositories",
     descricao: "Evolução multiplataforma do ecossistema AgroConecta. A aplicação Mobile introduziu uma arquitetura avançada de dados. O destaque é a gestão inteligente de estoque: algoritmos evitam duplicidade somando automaticamente as quantidades de colheitas cadastradas que possuem o mesmo padrão e dono.",
     participacao: "Atuei como Desenvolvedor Full-Stack. No Front-End, utilizei bibliotecas do React Native como Maps, notificações push e bibliotecas gráficas, estruturando as telas principais (Home, Dashboard e CRUDs). No Back-End, implementei o Prisma ORM, gerenciamento do PostgreSQL e a segurança com JWT.",
     tecnologiasPessoais: "React Native, TypeScript, Prisma ORM, JWT e PostgreSQL.",
@@ -114,7 +114,7 @@ const detalhesDosProjetos = {
     nome: "Mural de Estágio FATEC",
     tecnologias: "Spring Boot, React.js, Vite, MongoDB, Autenticação JWT",
     linguagens: "Java, JavaScript, HTML5, CSS3",
-    linkCodigo: "https://github.com/SamerHalat/mural-vagas",
+    linkCodigo: "https://github.com/orgs/Mural-Estagio/repositories",
     descricao: "Projeto institucional focado na modernização do portal de estágios da Fatec ZL. A solução substituiu o sistema legado, implementando lógicas profundas de filtragem (por cursos, turnos e habilidades) e segurança avançada para o painel de anunciantes.",
     participacao: "Liderei o ciclo de refatoração do sistema. No Backend, estruturei a API RESTful com Spring Boot e MongoDB. No Frontend, concebi a interface escalável usando React + Vite.",
     tecnologiasPessoais: "Spring Boot (Java), MongoDB (NoSQL), React.js e Autenticação JWT.",
@@ -138,7 +138,6 @@ export default function ProjectDetail() {
   const projeto = detalhesDosProjetos[id];
   const [imgIndex, setImgIndex] = useState(0);
 
-  // Faz o scroll voltar para o topo sempre que entra na página
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
   if (!projeto) {
@@ -150,7 +149,6 @@ export default function ProjectDetail() {
     );
   }
 
-  // Funções para navegar no carrossel
   const next = () => setImgIndex((prev) => (prev + 1) % projeto.fotos.length);
   const prev = () => setImgIndex((prev) => (prev - 1 + projeto.fotos.length) % projeto.fotos.length);
 
@@ -162,7 +160,6 @@ export default function ProjectDetail() {
       </header>
 
       <main>
-        {/* Renderiza o vídeo se houver link */}
         {projeto.videoUrl && (
           <section className="section-card">
             <h2>Demonstração em Vídeo</h2>
@@ -172,7 +169,6 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Renderiza o carrossel se houver fotos */}
         {projeto.fotos && projeto.fotos.length > 0 && (
           <section className="section-card">
             <h2>Galeria de Telas</h2>
@@ -189,7 +185,6 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Textos Detalhados */}
         <section className="section-card">
           <h2>Sobre o Projeto</h2>
           <p>{projeto.descricao}</p>
